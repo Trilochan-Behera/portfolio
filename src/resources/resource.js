@@ -27,11 +27,23 @@ export const skills = [
     link: "./Images/svg/javascript.svg", 
     rating: 5,
     desc: [
-      "Have 3 years of professional experience in web development.",
+      "Have 4 years of professional experience in web development.",
       "Developed in multiple work domains using JavaScript.",
       "Created numerous client projects using JavaScript and its frameworks.",
       "Consistently working to stay up-to-date and deepen understanding of the language.",
       "Expertise in asynchronous programming with Promises and async/await."
+    ]
+  },
+  { 
+    name: "TypeScript", 
+    link: "./Images/svg/typescript.svg", 
+    rating: 5, 
+    desc: [
+      "Proficient in using TypeScript to enhance JavaScript code with static types.",
+      "Experienced in defining interfaces and types to improve code reliability and readability.",
+      "Familiar with TypeScript features like generics and union types.",
+      "Skilled in configuring TypeScript with various build tools and frameworks.",
+      "Used TypeScript for building scalable and maintainable codebases in large projects."
     ]
   },
   { 
@@ -70,18 +82,7 @@ export const skills = [
       "Experienced in integrating Redux with React components and managing asynchronous actions."
     ]
   },
-  { 
-    name: "TypeScript", 
-    link: "./Images/svg/typescript.svg", 
-    rating: 4, 
-    desc: [
-      "Proficient in using TypeScript to enhance JavaScript code with static types.",
-      "Experienced in defining interfaces and types to improve code reliability and readability.",
-      "Familiar with TypeScript features like generics and union types.",
-      "Skilled in configuring TypeScript with various build tools and frameworks.",
-      "Used TypeScript for building scalable and maintainable codebases in large projects."
-    ]
-  },
+  
   { 
     name: "nodeJs", 
     link: "./Images/svg/nodejs.svg", 
@@ -169,7 +170,7 @@ export const skills = [
   { 
     name: "React Native", 
     link: "./Images/svg/react.svg", 
-    rating: 4, 
+    rating: 3, 
     desc: [
       "Experienced in building cross-platform mobile apps using React Native.",
       "Proficient in using React Native components, hooks, and state management with Redux.",
@@ -327,14 +328,13 @@ export const skills = [
 export const socialIcon=[
   {name:"gmail", link:"mailto:trilochanbeherak@gmail.com", icon:<MdOutgoingMail/>, color:"text-orange-600", clr:"#FF5733"},
   {name:"linkedin", link:"https://www.linkedin.com/in/trilochanbehera/", icon:<GrLinkedinOption/>, color:"text-blue-700", clr:"#0a66c2"},
-  {name:"whatsapp", link:"https://wa.me/+919583998665", icon:<IoLogoWhatsapp/>, color:"text-green-500", clr:"#25d366"},
-  {name:"github", link:"https://github.com/trilochan-behera-dev", icon:<IoLogoGithub/>, color:"text-gray-900", clr:"#1b1e21"}
+  {name:"github", link:"https://github.com/Trilochan-Behera", icon:<IoLogoGithub/>, color:"text-gray-900", clr:"#1b1e21"}
 ]
 
 export const projects = [
   {
     title: "Fintrack",
-    gitLink: "https://github.com/trilochan-behera-dev/FinTrack",
+    gitLink: "https://github.com/Trilochan-Behera/FinTrack",
     webLink: "https://fintracks.vercel.app/",
     tech: ["Next.js", "Express.js", "MongoDB"],
     image: "./Images/project/fintrack.png",
@@ -342,7 +342,7 @@ export const projects = [
   },
   {
     title: "Portfolio",
-    gitLink: "https://github.com/trilochan-behera-dev/Portfolio",
+    gitLink: "https://github.com/Trilochan-Behera/Portfolio",
     webLink: "https://trilochan-behera.vercel.app/",
     tech: ["React.js", "Taiwlind CSS", "Farmer motion"],
     image: "./Images/project/portfolio.png",
@@ -382,7 +382,7 @@ export const projects = [
   },
   {
     title: "TimeWise",
-    gitLink: "https://github.com/trilochan-behera-dev/Time-Wise",
+    gitLink: "https://github.com/Trilochan-Behera/Time-Wise",
     webLink: "https://timewise.vercel.app/",
     tech: ["React.js", "Express.js", "Tailwind CSS"],
     image: "./Images/project/calendar.jpg",
@@ -390,7 +390,7 @@ export const projects = [
   },
   {
     title: "Book Slot Now",
-    gitLink: "https://github.com/trilochan-behera-dev/BookYourSlot",
+    gitLink: "https://github.com/Trilochan-Behera/BookYourSlot",
     webLink: "",
     tech: ["React.js", "Express.js", "MongoDB"],
     image: "./Images/project/vaccine.jpg",
@@ -398,7 +398,7 @@ export const projects = [
   },
   {
     title: "E-learning",
-    gitLink: "https://github.com/trilochan-behera-dev/E-Learning",
+    gitLink: "https://github.com/Trilochan-Behera/E-Learning",
     webLink: "",
     tech: ["Python", "Django", "My SQL"],
     image: "./Images/project/elearning.jpg",
@@ -406,7 +406,7 @@ export const projects = [
   },
   {
     title: "Alumni Feedback System",
-    gitLink: "https://github.com/trilochan-behera-dev/Alumni_feeback_system",
+    gitLink: "https://github.com/Trilochan-Behera/Alumni_feeback_system",
     webLink: "",
     tech: ["HTML", "CSS", "JAVASCRIPT"],
     image: "./Images/project/alumni.jpg",

@@ -11,7 +11,7 @@ const Project = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14"
+      className="bg-gradient-to-b from-white-300 to-white-500 w-full pt-14"
       id="project"
     >
       

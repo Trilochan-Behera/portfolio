@@ -1,23 +1,16 @@
 import React, { useState } from "react";
-import {projects} from "../resources/resource"
-import { IoLogoGithub, IoMdArrowBack, IoMdArrowForward } from "react-icons/io"
-import { TbWorldWww } from "react-icons/tb"
-
-// import react slick
+import { projects } from "../resources/resource";
+import { IoLogoGithub, IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { TbWorldWww } from "react-icons/tb";
 import Slider from "react-slick";
-import { BiArrowBack } from "react-icons/bi";
 
 const ProjectCard = () => {
   const settings = {
     dots: true,
-    customPaging: function (i) {
-      return (
-        <a className="">
-          <span className="mx-2 rounded-l-full rounded-r-full h-4 w-4 block cursor-pointer transition-all "></span>
-        </a>
-      );
-    },
-    dotsClass: "slick-dots w-max absolute mt-20  ",
+    customPaging: () => (
+      <span className="flex h-2.5 w-2.5 rounded-full bg-gray-300 hover:bg-primary transition" />
+    ),
+    dotsClass: "slick-dots flex gap-2 mt-6 justify-center",
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -28,7 +21,6 @@ const ProjectCard = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
         },
       },
       {
@@ -40,74 +32,83 @@ const ProjectCard = () => {
       },
     ],
   };
+
   const [sliderRef, setSliderRef] = useState(null);
 
   return (
     <>
-      <Slider
-        {...settings}
-        arrows={false}
-        ref={setSliderRef}
-        className="flex items-stretch justify-items-stretch"
-      >
+      <Slider {...settings} arrows={false} ref={setSliderRef}>
         {projects.map((project, index) => (
-          <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-primary transition-all rounded-lg p-5 flex flex-col min-h-[40vh] max-h-[40vh]">
-              <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-                <div className="flex order-2 xl:order-1">
-                  <img
-                    src={project.image || "/banner.jpg"}
-                    height={40}
-                    width={60}
-                    alt="project icon"
-                    className="min-w-20 min-h-12 sm:min-w-20 sm:min-h-20"
-                  />
-                  <div className="flex flex-col ml-5 text-left">
-                    <p className="text-md text-primary capitalize font-medium italic ">
-                      {project.title}
-                    </p>
-                    <div className="mt-2 flex flex-nowrap gap-4 items-center text-lg">
-                                {
-                                    project?.gitLink ?
-                                        <a href={project?.gitLink} target="_blank">
-                                          <p className='text-blue-400'> <IoLogoGithub /></p>
-                                        </a>
-                                         :
-                                        <p className='text-gray-800'> <IoLogoGithub /></p>
-                                }
-                                {
-                                    project?.webLink ?
-                                        <a href={project?.webLink} target="_blank">
-                                            <p className='text-blue-400'> <TbWorldWww /></p>
-                                            </a>
-                                         :
-                                        <p className='text-gray-800'> <TbWorldWww /></p>
-                                }
+          <div key={index} className="px-4 py-4">
+            <div className="group bg-white rounded-3xl shadow-md border border-gray-200 hover:shadow-2xl transition-all duration-300 overflow-hidden h-[45vh] flex flex-col">
+              {/* Image */}
+              <div className="h-40 w-full overflow-hidden rounded-t-3xl">
+                <img
+                  src={project.image || "/banner.jpg"}
+                  alt="project"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                />
+              </div>
 
-                            </div>
-                  </div>
+              {/* Content */}
+              <div className="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 capitalize tracking-tight">
+                    {project.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-gray-600 line-clamp-3">
+                    {project.desc}
+                  </p>
+                </div>
+
+                {/* Icons */}
+                <div className="flex gap-5 text-xl mt-4">
+                  {project.gitLink ? (
+                    <a
+                      href={project.gitLink}
+                      target="_blank"
+                      className="text-primary hover:text-primary/80 transition"
+                    >
+                      <IoLogoGithub />
+                    </a>
+                  ) : (
+                    <span className="text-gray-400"><IoLogoGithub /></span>
+                  )}
+
+                  {project.webLink ? (
+                    <a
+                      href={project.webLink}
+                      target="_blank"
+                      className="text-primary hover:text-primary/80 transition"
+                    >
+                      <TbWorldWww />
+                    </a>
+                  ) : (
+                    <span className="text-gray-400"><TbWorldWww /></span>
+                  )}
                 </div>
               </div>
-              <p className="mt-5 text-left text-ellipsis">“{project.desc}”.</p>
             </div>
           </div>
         ))}
       </Slider>
-      <div className="flex w-full items-center justify-end">
-        <div className="flex flex-none justify-between w-auto  mt-4 sm:mt-14">
-          <div
-            className="mx-4 flex items-center justify-center h-8 w-8 rounded-full bg-white border-primary border hover:bg-primary hover:text-white-500 transition-all text-primary cursor-pointer"
-            onClick={sliderRef?.slickPrev}
-          >
-            <IoMdArrowBack className="h-6 w-6 " />
-          </div>
-          <div
-            className="flex items-center justify-center h-8 w-8 rounded-full bg-white border-primary border hover:bg-primary hover:text-white-500 transition-all text-primary cursor-pointer"
-            onClick={sliderRef?.slickNext}
-          >
-            <IoMdArrowForward className="h-6 w-6" />
-          </div>
-        </div>
+
+      {/* Buttons */}
+      <div className="flex justify-end mt-6 pr-4 gap-4">
+        <button
+          onClick={sliderRef?.slickPrev}
+          className="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow border border-primary text-primary hover:bg-primary hover:text-white transition"
+        >
+          <IoMdArrowBack className="text-xl" />
+        </button>
+
+        <button
+          onClick={sliderRef?.slickNext}
+          className="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow border border-primary text-primary hover:bg-primary hover:text-white transition"
+        >
+          <IoMdArrowForward className="text-xl" />
+        </button>
       </div>
     </>
   );

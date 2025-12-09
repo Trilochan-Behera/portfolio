@@ -43,7 +43,7 @@ Explore my portfolio live at [https://trilochan-behera.vercel.app/](https://tril
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/trilochan-behera-dev/Portfolio.git
+git clone https://github.com/Trilochan-Behera/Portfolio.git
 ```
 ```bash
 cd Portfolio

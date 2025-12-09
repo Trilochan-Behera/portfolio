@@ -16,8 +16,8 @@ const Experience = () => {
     >
       <Heading>Experience</Heading>
       <SubHeading>Professional Expertise</SubHeading>
-      <div className="grid  grid-cols-1 lg:grid-cols-3 gap-8 p  y-8 my-12 justify-center ">
-        <ScrollAnimationWrapper className="flex w-full justify-end">
+      <div className="grid grid-cols-1 lg:grid-cols-3 my-12 justify-center ">
+        <ScrollAnimationWrapper className="flex w-full justify-end ">
           <motion.div className="h-full w-full p-4 flex justify-center lg:justify-start" variants={scrollAnimation}>
             <img
               src="./Images/svg/software.svg"
