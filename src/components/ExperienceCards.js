@@ -33,7 +33,7 @@ export default function ExperienceCards() {
           <LiaIndustrySolid color="white" />
         </div> */}
         <a href='https://user.powrofyou.com/' target='_blank'><p className="text-primary font-extrabold italic "> Powr of You Ltd </p></a>
-        <p className="text-primary font-medium text-xs ">15th Jun 2024 - 23rd Dec 2024 (0.7 yrs) </p>
+        <p className="text-primary font-medium text-xs ">15th Jun 2024 - 20th Dec 2024 (0.7 yrs) </p>
         <p className="text-primary font-medium text-xs"> Software Developer </p>
         <p className="text-primary font-medium text-xs">Odisha - Remote </p>
       </LeftShow>
