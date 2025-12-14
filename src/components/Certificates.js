@@ -105,7 +105,7 @@ const Certificates = () => {
                             />
                         </motion.div>
 
-                        <div className="hidden md:flex flex-1 flex-row gap-2">
+                        <div className="flex flex-1 flex-row gap-2">
                             <motion.div
                                 className="flex flex-1 flex-col"
                                 variants={motionVariants}
@@ -121,7 +121,7 @@ const Certificates = () => {
                             </motion.div>
 
                             <motion.div
-                                className="hidden md:flex flex-1 flex-col"
+                                className="flex flex-1 flex-col"
                                 variants={motionVariants}
                                 initial="hidden"
                                 animate="visible"
@@ -137,7 +137,7 @@ const Certificates = () => {
                     </div>
 
                     <div className="flex flex-1 flex-col gap-2">
-                        <div className="hidden md:flex flex-1 flex-row gap-2">
+                        <div className="flex flex-1 flex-row gap-2">
                             <motion.div
                                 className="flex flex-1 flex-col"
                                 variants={motionVariants}
@@ -153,7 +153,7 @@ const Certificates = () => {
                             </motion.div>
 
                             <motion.div
-                                className="hidden md:flex flex-1 flex-col"
+                                className="flex flex-1 flex-col"
                                 variants={motionVariants}
                                 initial="hidden"
                                 animate="visible"
